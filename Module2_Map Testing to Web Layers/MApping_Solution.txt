@@ -3,6 +3,7 @@ Navigated to Login Page and inspected towards "Sign in" button, the elements
 tab highlights the button's HTML. Noted that the <button type='submmit'>, class
 attribute is inline-flex items-center px-4 py-2 rounded-md text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-60 disabled:cursor-not-allowed bg-indigo-600 hover:bg-indigo-700 focus-visible:outline-indigo-600 w-full justify-center>
 And switched back to Network tab(filter Fetch/XHR)
+
 Catalogue load result analyzed using Network tab from web browser inspect method.
 	{Request URL
 	http://localhost:3000/api/courses?page=1&pageSize=20
@@ -47,3 +48,11 @@ Add a course to the cart:> Added courses to the cart successfully
 	201 Created
 	Cart number increases everytime course is added to the card from course list.}
 
+Submit a payment with a special character:> Error recorded as "Order not complete, and server crashes out"
+	{Request URL
+	http://localhost:3000/api/checkout
+	Request Method
+	POST
+	Status Code
+	500 Internal Server Error
+	}
