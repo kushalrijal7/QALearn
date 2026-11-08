@@ -1,0 +1,49 @@
+User Action,"Presentation Layer","Application Layer","Expected Status Code","Data Layer"
+Navigated to Login Page and inspected towards "Sign in" button, the elements
+tab highlights the button's HTML. Noted that the <button type='submmit'>, class
+attribute is inline-flex items-center px-4 py-2 rounded-md text-white transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 disabled:opacity-60 disabled:cursor-not-allowed bg-indigo-600 hover:bg-indigo-700 focus-visible:outline-indigo-600 w-full justify-center>
+And switched back to Network tab(filter Fetch/XHR)
+Catalogue load result analyzed using Network tab from web browser inspect method.
+	{Request URL
+	http://localhost:3000/api/courses?page=1&pageSize=20
+	Request Method
+	GET
+	Status Code
+	200 OK
+	Courses were displayed/shown successfully}
+
+View a single course:> Selected the single course
+	{Request URL
+	http://localhost:3000/api/courses/01M6WKWS9ERX0K9NP9AFJYE1AY
+	Request Method
+	GET
+	Status Code
+	200 OK
+	Reads rows from the courses table}
+
+Filter by level:> Filter level work well, shows courses according to levels
+	{Request URL
+	http://localhost:3000/api/courses?page=1&pageSize=20&level=intermediate
+	Request Method
+	GET
+	Status Code
+	200 OK
+	}
+
+Search by title:> Successfully searched using title
+	{Request URL
+	http://localhost:3000/api/courses?page=1&pageSize=20&search=software+testing
+	Request Method
+	GET
+	Status Code
+	200 OK}
+
+Add a course to the cart:> Added courses to the cart successfully
+	{Request URL
+	http://localhost:3000/api/cart/items
+	Request Method
+	POST
+	Status Code
+	201 Created
+	Cart number increases everytime course is added to the card from course list.}
+
