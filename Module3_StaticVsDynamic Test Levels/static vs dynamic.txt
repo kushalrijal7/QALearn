@@ -1,0 +1,7 @@
+Static Vs Dynamic Testing Techniques
+Reviewing blue print is a static testing, Static testing goal is 
+to find defect before development, reduce risk early and lower the
+cost of bugs.
+Dynamic testing refers to walking through the finish product. 
+Let’s say an example of a house, check the windows are opening well or 
+not, the door, it means its behaving as expected or not.
